@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭкоПроект</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .quiz button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Стили для рекламного блока */
+        .ad-banner {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .ad-banner ins {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <h1>ЭкоПроект</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#articles">Статьи</a></li>
+                    <li><a href="#quiz">Викторины</a></li>
+                    <li><a href="#tasks">Задания</a></li>
+                    <li><a href="#certificates">Сертификаты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Рекламный баннер (Google AdSense) -->
+    <section class="ad-banner">
+        <div class="container">
+            <!-- Замените этот код на ваш уникальный код Google AdSense -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" <!-- Ваш ID -->
+                 data-ad-slot="YYYYYYYYYY" <!-- ID рекламного блока -->
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- Блок "О нас" -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы — команда ECOHELPYOUTH, стремящихся сделать мир лучше через экологические инициативы. Присоединяйтесь к нам, чтобы внести свой вклад в защиту планеты!</p>
+            <img src="https://via.placeholder.com/600x300" alt="Наша команда">
+        </div>
+    </section>
+
+    <!-- Блок "Статьи" -->
+    <section id="articles" class="section articles">
+        <div class="container">
+            <h2>Полезные статьи</h2>
+            <article>
+                <h3>Как сортировать мусор?</h3>
+                <p>Узнайте, как правильно сортировать отходы и уменьшить загрязнение окружающей среды.</p>
+            </article>
+            <article>
+                <h3>Эко-привычки на каждый день</h3>
+                <p>Простые шаги, которые помогут вам жить более экологично.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Блок "Викторины" -->
+    <section id="quiz" class="section quiz">
+        <div class="container">
+            <h2>Викторины</h2>
+            <p>Проверьте свои знания об экологии и получите удовольствие от обучения!</p>
+            <button onclick="startQuiz()">Начать викторину</button>
+        </div>
+    </section>
+
+    <!-- Блок "Задания" -->
+    <section id="tasks" class="section tasks">
+        <div class="container">
+            <h2>Эко-задания</h2>
+            <p>Выполняйте задания и получайте баллы за ваш вклад в экологию.</p>
+            <ul>
+                <li>Соберите 1 кг пластика на улице.</li>
+                <li>Посадите дерево.</li>
+                <li>Расскажите друзьям о важности переработки.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Блок "Сертификаты" -->
+    <section id="certificates" class="section certificates">
+        <div class="container">
+            <h2>Сертификаты</h2>
+            <p>За выполнение заданий вы получаете сертификаты, подтверждающие ваш вклад в экологию.</p>
+            <img src="https://via.placeholder.com/400x200" alt="Пример сертификата">
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 ЭкоПроект. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Массив вопросов
+        const allQuestions = [
+            { question: "Что такое переработка?", options: ["Процесс уничтожения отходов", "Процесс повторного использования материалов", "Процесс сжигания мусора"], answer: 1 },
+            { question: "Какой цвет контейнера для пластика?", options: ["Синий", "Желтый", "Зеленый"], answer: 1 },
+            { question: "Что такое компостирование?", options: ["Процесс разложения органических отходов", "Процесс очистки воды", "Процесс производства бумаги"], answer: 0 },
+            { question: "Какой газ является основным источником парникового эффекта?", options: ["Кислород", "Углекислый газ", "Азот"], answer: 1 },
+            { question: "Что такое экологический след?", options: ["Измерение воздействия человека на окружающую среду", "Отпечаток животного на земле", "Тропа в лесу"], answer: 0 },
+            { question: "Какой материал самый сложный для переработки?", options: ["Бумага", "Стекло", "Пластик"], answer: 2 },
+            { question: "Что такое возобновляемая энергия?", options: ["Энергия, получаемая из невозобновляемых источников", "Энергия, получаемая из солнца, ветра или воды", "Энергия, получаемая из угля"], answer: 1 },
+            { question: "Какой день считается Днем Земли?", options: ["22 апреля", "1 января", "15 марта"], answer: 0 },
+            { question: "Что такое нулевые отходы?", options: ["Концепция минимизации отходов", "Отсутствие отходов в природе", "Переработка мусора"], answer: 0 },
+            { question: "Какой вид транспорта самый экологичный?", options: ["Автомобиль", "Поезд", "Велосипед"], answer: 2 }
+        ];
+
+        // Функция для случайной генерации викторины
+        function startQuiz() {
+            const totalQuestions = 5; // Количество вопросов в викторине
+            const selectedQuestions = getRandomQuestions(allQuestions, totalQuestions);
+
+            let score = 0;
+
+            selectedQuestions.forEach((q, index) => {
+                const userAnswer = prompt(`${index + 1}. ${q.question}\n1. ${q.options[0]}\n2. ${q.options[1]}\n3. ${q.options[2]}`);
+                if (parseInt(userAnswer) === q.answer + 1) {
+                    score++;
+                }
+            });
+
+            alert(`Вы ответили правильно на ${score} из ${selectedQuestions.length} вопросов!`);
+        }
+
+        // Функция для выбора случайных вопросов
+        function getRandomQuestions(questions, count) {
+            const shuffled = questions.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+    </script>
+</body>
+</html>
